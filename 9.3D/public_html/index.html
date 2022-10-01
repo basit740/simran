@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+      .input {
+        padding: 5px 10px;
+      }
+
+      .input--full {
+        width: 100%;
+      }
+
+      .flex-row {
+        display: flex;
+        row-gap: 2px;
+      }
+
+      .form-check {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>dKin Pizza Order Form</h1>
+      <p>Thank you for chooing dKin Pizza! Please fill in the customer & pizza order details below.</p>
+      <form action="/order" method="POST">
+
+        <!-- CUSTOMER FORM CONTAINER -->
+        <div class="customer-container mt-2">
+          <h3 class="bg-primary pl-2 pr-2 text-white rounded mb-4">Customer Details</h3>
+
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <div><label for="first-name">First name</label></div>
+              <input type="text" class="input input--full" name="first-name" id="first-name">
+            </div>
+
+            <div class="col-md-6">
+              <div><label for="last-name">Last name</label></div>
+              <input type="text" class="input input--full" name="last-name" id="last-name">
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-md-12">
+              <div><label for="address">Delivery Address</label></div>
+              <input type="text" id="address" class="input input--full" name="address">
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <div><label for="citty">City</label></div>
+              <input type="text" id="city" class="input input--full" name="city">
+            </div>
+            <div class="col-md-3">
+              <div><label for="state">State</label></div>
+              <select name="state" class="input pb-2 input--full" id="state">
+                <option value="SA">SA</option>
+                <option value="QLD">QLD</option>
+                <option value="ACT">ACT</option>
+                <option value="NT">NT</option>
+                <option value="TAS">TAS</option>
+                <option value="VIC">VIC</option>
+                <option value="WA">WA</option>
+                <option value="NSW">NSW</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <div><label for="postcode">Postcode</label></div>
+              <input type="text" id="postcode" class="input input--full" name="postcode">
+            </div>
+          </div>
+
+          <div class="row mt-2">
+
+            <div class="col-md-6">
+              <div><label for="email">Email Address</label></div>
+              <input type="email" id="email" class="input input--full" name="email" />
+
+            </div>
+            <div class="col-md-6">
+              <div><label for="mobile">Mobile Number</label></div>
+              <input type="text" id="mobile" class="input input--full" name="mobile">
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- PIZZA FORM CONTAINER -->
+        <div class="pizza-container mt-4">
+          <h3 class="bg-primary pl-2 pr-2 text-white rounded mb-4">Pizza Selection</h3>
+
+          <div class="row">
+            <div class="col-md-2">
+              <label for="pizza-type">Select your pizza:</label>
+            </div>
+            <div class="col-md-6">
+              <select name="pizza-type" class="input pb-2 input--full" id="pizza-type">
+                <option value="Cheese Pizza">Cheese Pizza</option>
+                <option value="Veggie Pizza">Veggie Pizza</option>
+                <option value="Marinara Pizza">Marinara Pizza</option>
+                <option value="Super Supreme">Super Supreme</option>
+                <option value="Tropical Pizza">Tropical Pizza</option>
+                <option value="Veggie Supreme">Veggie Supreme</option>
+              </select>
+            </div>
+
+            <div class="col-md-2">
+              <label for="pizza-qty">Number of Pizzas:</label>
+            </div>
+            <div class="col-md-2">
+              <input type="number" class="input input--full" id="pizza-qty" name="pizza-qty">
+            </div>
+          </div>
+
+          <div class="row mt-3 flex-row">
+            <div class="col-md-2">
+              <label for="pizza-size">Select a pizza:</label>
+
+            </div>
+
+            <div class="col-md-10 flex-row">
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="Extra Large" name="pizza-size" id="extra-large" />
+                <label class="form-check-label">
+                  Extra-Large
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="Large" name="pizza-size" id="large">
+                <label class="form-check-label">
+                  Large
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="Medium" name="pizza-size" checked id="medium">
+                <label class="form-check-label" for="medium">
+                  Medium
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="Small" name="pizza-size" id="small">
+                <label class="form-check-label" for="small">
+                  Small
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row mt-3">
+            <div class="col-md-2">
+              <label for="pizza-size">Special requests:</label>
+
+            </div>
+
+            <div class="col-md-10 flex-row">
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Extra Cheese" name="add" id="extra-cheese" />
+                <label class="form-check-label" id="extra-cheese">
+                  Extra-Cheese
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Roasted Garlic" name="add" id="roasted-garlic">
+                <label class="form-check-label" id="roasted-garlic">
+                  Roasted Garlic
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Thick Crust" name="add" id="thick-crust">
+                <label class="form-check-label" id="thick-crust">
+                  Thick Crust
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="No Chilli" name="add" id="no-chilli">
+                <label class="form-check-label" for="no-chilli">
+                  No Chilli
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-md-2">
+              <label for="promotion-code">Promotion Code</label>
+            </div>
+
+            <div class="col-md-10">
+              <input type="text" class="input input--full" id="promotion-code" name="promotionCode">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-2"></div>
+          <div class="col-md-7">
+            <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+            <button class="btn btn-primary btn-lg float-right" type="submit">Reset</button>
+            <div class="clear-fix"></div>
+          </div>
+          <div class="btn-col-md-3">
+
+          </div>
+
+        </div>
+
+
+
+
+    </div>
+    </form>
+
+    </div>
+
+
+
+
+
+    </div>
+  </body>
+
+</html>

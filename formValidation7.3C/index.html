@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <title>Form Validation</title>
+    <style>
+      input {
+        padding: 10px 15px;
+
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid rgb(186, 181, 181);
+      }
+
+      .flex-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      button {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row welcome-text">
+        <div class="col-md-12">
+          <h1>Form Validation</h1>
+          <h3>Online Form Validation</h3>
+          <p>Please enter your contact details into the form below to register your interest in receiving
+            support with a given unit. Please make sure you use the correct format while inputting your data
+          </p>
+        </div>
+
+      </div>
+
+      <div class="col-md-8 form-container">
+        <form action="">
+          <div class="row mb-3">
+            <div class="flex-row__item col-md-2">
+              <label for="name">Name: </label>
+            </div>
+            <div class="flex-row__item col-md-6">
+              <input type="text" id="name" name="name" placeholder='Your name'>
+            </div>
+            <div class="flex-row__item col-md-4">
+              <p class="text-danger invisible feedback-name"> This is feedback</p>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="flex-row__item col-md-2">
+              <label for="email" palceholder="Enter email">Email: </label>
+            </div>
+            <div class="flex-row__item col-md-6">
+              <input type="text" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="flex-row__item col-md-4">
+              <p class="text-danger invisible feedback-email"> This is feedback</p>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="flex-row__item col-md-2">
+              <label for="deakin-unit">Deakin Unit: </label>
+            </div>
+            <div class="flex-row__item col-md-6">
+              <input type="text" id="deakin-unit" placeholder="Unit Code" name="deakin-unit">
+            </div>
+            <div class="flex-row__item col-md-4">
+              <p class="text-danger invisible feedback-deakin-unit"> This is feedback</p>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="flex-row__item col-md-2">
+              <label for="phone">Phone: </label>
+            </div>
+            <div class="flex-row__item col-md-6">
+              <input type="text" id="phone" placeholder="Phone Number" name="phone">
+            </div>
+            <div class="flex-row__item col-md-4">
+              <p class="text-danger invisible feedback-phone"> This is feedback</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="flex-row__item col-md-3">
+              <!-- <label for="phone">Phone: </label> -->
+              <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+            </div>
+            <div class="flex-row__item col-md-3">
+              <button class="btn btn-secondary btn-lg" type="reset">Reset</button>
+            </div>
+            <div class="flex-row__item col-md-5">
+              <!-- <p class="text-danger feedback-phone"> This is feedback</p> -->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+
+</html>
